@@ -7,7 +7,10 @@ pipeline{
     stages{
         stage('stage1'){
             steps{
-                echo "{$env.name}"
+                script{
+                    load "./env.groovy"
+                    cho "{$env.name}"
+                }
             }
         }
         stage('stage2'){
