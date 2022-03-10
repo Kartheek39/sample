@@ -7,12 +7,12 @@ pipeline{
     stages{
         stage('stage1'){
             steps{
-                echo "${name}"
+                echo "${env.name}"
             }
         }
         stage('stage2'){
             steps{
-                echo "${url}"
+                echo "${env.url}"
             }
         }
     }
