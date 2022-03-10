@@ -13,7 +13,9 @@ pipeline{
         }
         stage('stage2'){
             steps{
-                echo "{$env.url}"
+                script {
+                    echo "{$env.url}"
+                }
             }
         }
     }
