@@ -17,6 +17,7 @@ pipeline{
         stage('stage2'){
             steps{
                 echo "{$env.url}"
+                echo "${env.BUILD_NUMBER}"
             }
         }
     }
