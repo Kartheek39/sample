@@ -3,6 +3,7 @@ pipeline{
     environment{
         name= "kartheek"
         url= "something"
+        id= 39
     }
     stages{
         stage('stage1'){
