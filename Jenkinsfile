@@ -14,6 +14,7 @@ pipeline{
         stage('stage2'){
             steps{
                 script {
+                    load "./env.groovy"
                     echo "{$env.url}"
                 }
             }
