@@ -2,7 +2,7 @@ pipeline{
     agent any
     environment{
         name= "kartheek"
-        url= "something"
+        url= ""
         id= 39
     }
     stages{
