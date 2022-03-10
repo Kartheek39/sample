@@ -18,6 +18,7 @@ pipeline{
             steps{
                 echo "{$env.url}"
                 echo "${env.BUILD_NUMBER}"
+                echo "${env.WORKSPACE}"
             }
         }
     }
