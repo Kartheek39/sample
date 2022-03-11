@@ -10,7 +10,7 @@ pipeline{
             steps{
                 script{
                     load "./env.groovy"
-                    echo "{$env.name}"
+                    echo "{$name}"
                 }
             }
         }
