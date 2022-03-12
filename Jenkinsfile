@@ -11,6 +11,7 @@ pipeline{
                 script{
                     load "./env.groovy"
                     echo "{$name}"
+                    echo "{$url}"
                 }
             }
         }
