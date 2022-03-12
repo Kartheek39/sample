@@ -22,21 +22,19 @@ pipeline{
                 echo "${env.BRANCH_NAME}"
             }
         }
-        stage('stage3'){
-            when{
+        stage('stage3') {
+            when {
                 branch 'main'
             }
-            steps{
+            steps {
                 echo "deployment done"
             }
         }
-        stage('stage4'){
-            steps {
-                if (env.BRANCH_NAME == "main") {
-                    echo "if condition satiesfied"
-                } else {
-                    echo "if condition unsatiesfied"
-                }
+        stage('stage4') {
+            if (env.BRANCH_NAME == 'master') {
+                echo 'I only execute on the master branch'
+            } else {
+                echo 'I execute elsewhere'
             }
         }
     }
