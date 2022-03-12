@@ -25,7 +25,6 @@ pipeline{
 					 sortMode: 'NONE', 
 					 tagFilter: '*', 
 					 type: 'GitParameterDefinition')])
-    }
     stages{
         stage('stage1'){
             steps{
