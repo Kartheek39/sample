@@ -30,5 +30,12 @@ pipeline{
                 echo "deployment done"
             }
         }
+        stage('stage4'){
+            if (env.BRANCH_NAME == "main"){
+                echo "if condition satiesfied"
+            } else {
+                echo "if condition unsatiesfied"
+            }
+        }
     }
 }
