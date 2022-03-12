@@ -21,5 +21,13 @@ pipeline{
                 echo "${env.WORKSPACE}"
             }
         }
+        stage('stage3'){
+            when{
+                branch 'main'
+            }
+            steps{
+                echo "deployment done"
+            }
+        }
     }
 }
