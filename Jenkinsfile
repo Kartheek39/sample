@@ -16,7 +16,7 @@ pipeline{
 		    tagFilter: '*',
 		    type: 'PT_BRANCH')
     }*/
-    properties([parameters([gitParameter(branch: '', 
+    options([parameters([gitParameter(branch: '', 
 					 branchFilter: '.*', 
 					 defaultValue: 'origin/main', 
 					 name: 'forbranch', 
