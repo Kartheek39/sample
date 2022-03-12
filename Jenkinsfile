@@ -19,6 +19,7 @@ pipeline{
                 echo "{$env.url}"
                 echo "${env.BUILD_NUMBER}"
                 echo "${env.WORKSPACE}"
+                echo "${env.BRANCH_NAME}"
             }
         }
         stage('stage3'){
