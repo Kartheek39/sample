@@ -2,6 +2,7 @@ pipeline{
     agent any
     environment{
         name = "kartheek"
+    }
     stages{
         stage('stage1'){
             steps{
