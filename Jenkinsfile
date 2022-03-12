@@ -3,7 +3,7 @@ pipeline{
     environment{
         name = "kartheek"
     }
-    parameters {
+    /*parameters {
 	   gitParameter(
 		    branch: '',
 		    branchFilter: 'origin/(.*)',
@@ -15,7 +15,16 @@ pipeline{
 		    sortMode: 'NONE',
 		    tagFilter: '*',
 		    type: 'PT_BRANCH')
-    }
+    }*/
+    properties([parameters([gitParameter(branch: '', 
+					 branchFilter: '.*', 
+					 defaultValue: 'origin/main', 
+					 name: 'forbranch', 
+					 quickFilterEnabled: false, 
+					 selectedValue: 'NONE', 
+					 sortMode: 'NONE', 
+					 tagFilter: '*', 
+					 type: 'GitParameterDefinition')])])
     stages{
         stage('stage1'){
             steps{
