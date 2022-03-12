@@ -16,16 +16,8 @@ pipeline{
 		    tagFilter: '*',
 		    type: 'PT_BRANCH')
     }*/
-    parameters{
-	([gitParameter(branch: '', 
-		       branchFilter: '.*', 
-			defaultValue: 'origin/main', 
-			name: 'forbranch', 
-			quickFilterEnabled: false, 
-			selectedValue: 'NONE', 
-			sortMode: 'NONE', 
-			tagFilter: '*', 
-			type: 'GitParameterDefinition')])
+    parameters {
+      gitParameter branchFilter: 'origin/(.*)', defaultValue: 'master', name: 'BRANCH', type: 'PT_BRANCH'
     }
     stages{
         stage('stage1'){
